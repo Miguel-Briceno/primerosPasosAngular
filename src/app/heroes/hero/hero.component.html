@@ -1,0 +1,32 @@
+<h1>Spiderman</h1>
+<br>
+<dl>
+  <td class="font-semibold">Nobre:</td>
+  <td class="px-4"> {{ name }} </td>
+  <br>
+  <td class="font-semibold">Edad:</td>
+  <td class="px-4"> {{ age }} </td>
+  <br>
+  <td>Metodo:</td>
+  <td> {{ getHeroDescription() }} </td>
+  <br>
+  <td class="font-semibold">Capitalizado:</td>
+  <td class="px-4"> {{  capitalizaName }} </td>
+  <br>
+</dl>
+
+<button
+*ngIf="name !=='Spiderman'"
+(click)="changeHero()" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2">
+  Cambiar Nombre
+</button>
+<button
+*ngIf="age !==25"
+(click)="changeAge()" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+  Cambiar Edad
+</button>
+
+<button
+(click)="resetForm()" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+  Reset
+</button>
